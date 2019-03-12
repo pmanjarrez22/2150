@@ -3,7 +3,29 @@ import java.util.Scanner
 public QuotientExceptionDemo
   public static void main(String[] args){
   Scanner input = new Scanner(System.in);
-  System.out.println("Enter numerator integer: ");
-  int num1 = input.nextInt();
+  int num;
+  int dem;
+  String response;
+  
+  do{
+    try{
+      System.out.println("Enter a numerator integer: ");
+      int num = input.nextInt();
+      
+      System.out.println("Enter demoninator integer: It must not be 0: ");
+      int dem = input.nextInt();
+      
+      result = num/ dem;
+      System.out.println(num + "/" + dem + " = " + result);
+    }
+    catch(ArithmeticException ae)
+    {
+      System.out.println("You must enter not enter 0 ofr demoninator!")
+    }
+    
+  
+  }while();
   
   }
+}
+  
